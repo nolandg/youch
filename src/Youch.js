@@ -37,7 +37,7 @@ class Youch {
   _getFrameSource (frame) {
     const path = frame.getFileName()
       // Handle the common setup of Webpack
-      .replace(/dist\/webpack:\//g, "")
+      .replace(/build\/webpack:\//g, "")
     return new Promise((resolve, reject) => {
       fs.readFile(path, 'utf-8', (error, contents) => {
         if (error) {
